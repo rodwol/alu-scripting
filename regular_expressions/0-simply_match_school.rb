@@ -1,4 +1,4 @@
-#!usr/bin/env ruby
+#!/usr/bin/env ruby
 input = ARGV[0]
 matches = input.scan(/School/)
 
