@@ -8,6 +8,7 @@ import requests
 
 
 def top_ten(subreddit):
+    """DOCS"""
     url = f'https://www.reddit.com/r/{subreddit}/hot.json'
     user_agent = {'User-agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=user_agent, allow_redirects=False)
