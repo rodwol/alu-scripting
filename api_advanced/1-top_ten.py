@@ -18,7 +18,8 @@ def top_ten(subreddit):
 
         Prints:
             The titles of the first 10 hot posts listed in the given
-            subreddit. Prints `None` if the subreddit is invalid or an error occurs."""
+            subreddit. Prints `None` if the subreddit is invalid or an error occurs.
+            """
     url = f'https://www.reddit.com/r/{subreddit}/hot.json'
     user_agent = {'User-agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=user_agent, allow_redirects=False)
