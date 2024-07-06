@@ -13,7 +13,6 @@ def top_ten(subreddit):
     if response.status_code == 200:
         data = response.json()['data']
         for post in data['children'][:10]:
-            return post['data']['title']
+            print(post['data']['title'])
     else:
-        print("Failed to retrieve data")
-        print("Response content:", response.content)
+        print(None)
