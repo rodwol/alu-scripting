@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Reddit Top Ten Posts Module"""
+"""DOCS"""
 import requests
 
 
 def top_ten(subreddit):
-    """Queries the Reddit API to get the top 10 hot posts"""
+    """Docs"""
     url = f'https://www.reddit.com/r/{subreddit}/hot.json'
     user_agent = {'User-agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=user_agent, allow_redirects=False)

@@ -4,7 +4,7 @@ import requests
 
 
 def recurse(subreddit, hot_list=[], after=None):
-    """"Doc"""
+    """ prints a sorted count of given keywords """
     url = "https://www.reddit.com/r/{subreddit}/about.json"
     header = {'User-Agent': 'rodwol'}
     param = {'after': after}
