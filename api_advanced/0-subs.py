@@ -1,16 +1,10 @@
 #!/usr/bin/python3
-"""
- returns the number of subscribers if
- the request is successful.
- returns 0 if the subreddit is not found (HTTP 404)
-"""
+"""DOC"""
 import requests
 
 
 def number_of_subscribers(subreddit):
-    """
-    Fetches the number of subscribers for a given subreddit
-    """
+    """DOC"""
     user_agent = {'User-agent': 'rodwol'}
     url = f'https://www.reddit.com/r/{subreddit}/about.json'
     response = requests.get(url, headers=user_agent, allow_redirects=False)
