@@ -75,7 +75,7 @@ def count_words(subreddit, word_list, results=None, after=None):
 
     try:
         # Make the GET request to Reddit API
-        response = requests.get(url, 
+        response = requests.get(url,
         headers=headers, params=params, allow_redirects=False)
         response.raise_for_status()  # Raise an exception for HTTP errors
 
@@ -87,7 +87,7 @@ def count_words(subreddit, word_list, results=None, after=None):
 
         # Process each post title
         for post in posts:
-            title = post['data']['title'].lower()  
+            title = post['data']['title'].lower()
             # Convert title to lowercase
 
             # Count occurrences of each word in title
@@ -105,8 +105,8 @@ def count_words(subreddit, word_list, results=None, after=None):
             # Recursively fetch next page of results
             count_words(subreddit, word_list, results, after)
         else:
-            # Print results in descending order of count, alphabetically for ties
-            sorted_results = sorted(results.items(), key=lambda x: (-x[1], x[0]))
+            sorted_results = sorted(results.items(),
+            key=lambda x: (-x[1], x[0]))
             for word, count in sorted_results:
                 print(f"{word}: {count}")
 
