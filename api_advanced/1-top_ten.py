@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-"""DOCS"""
+"""
+This module provides a function to
+retrieve the number of subscribers for a given subreddit
+from Reddit's API
+"""
 import requests
 
 
 def top_ten(subreddit):
-    """Docs"""
+    """
+    fetches the number of subscribers for a given subreddit
+    """
     url = f'https://www.reddit.com/r/{subreddit}/hot.json'
     user_agent = {'User-agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=user_agent, allow_redirects=False)

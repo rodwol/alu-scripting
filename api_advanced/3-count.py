@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-""" 3-count.py """
+"""
+Recursively fetches the titles of all hot
+articles for a given subreddit
+ """
 import requests
 
 
 def count_words(subreddit, word_list, results=None, after=None):
-    """DOC"""
+    """
+    Recursively fetches the titles of all hot
+    articles for a given subreddit
+    """
     if results is None:
         results = {}
 
