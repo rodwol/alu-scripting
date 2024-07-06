@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Reddit Subscriber Checker Module
+"""Reddit Subscriber Checker Module
 
 This module provides a function to check the number of
 subscribers for a given subreddit using the Reddit API.
@@ -21,14 +20,12 @@ Functions:
 Example Usage:
 - Unauthenticated: Uses `requests` to fetch subreddit details.
 - Authenticated: Uses `praw` for a more reliable and
-authenticated request to the Reddit API.
-"""
+authenticated request to the Reddit API."""
 import requests
 
 
 def number_of_subscribers(subreddit):
-    """
-    Reddit Subscriber Checker Module
+    """Reddit Subscriber Checker Module
 
 This module provides a function to check the number of
 subscribers for a given subreddit using the Reddit API.
