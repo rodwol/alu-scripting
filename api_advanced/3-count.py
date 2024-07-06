@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ 3-count.py """
-import json
 import requests
 
 
@@ -48,9 +47,11 @@ def count_words(subreddit, word_list, after="", count=[]):
 
             for i in range(len(word_list)):
                 if (count[i] > 0) and i not in save:
-                    print("{}: {}".format(word_list[i].lower(), count[i]))
+                    print("{}: {}".format
+                          (word_list[i].lower(), count[i]))
         else:
             count_words(subreddit, word_list, after, count)
+
 """
 def count_words(subreddit, word_list, results=None, after=None):
     if results is None:
@@ -74,7 +75,8 @@ def count_words(subreddit, word_list, results=None, after=None):
 
     try:
         # Make the GET request to Reddit API
-        response = requests.get(url, headers=headers, params=params, allow_redirects=False)
+        response = requests.get(url, 
+        headers=headers, params=params, allow_redirects=False)
         response.raise_for_status()  # Raise an exception for HTTP errors
 
         # Parse JSON response
@@ -85,7 +87,8 @@ def count_words(subreddit, word_list, results=None, after=None):
 
         # Process each post title
         for post in posts:
-            title = post['data']['title'].lower()  # Convert title to lowercase
+            title = post['data']['title'].lower()  
+            # Convert title to lowercase
 
             # Count occurrences of each word in title
             for word in word_list:
@@ -125,4 +128,3 @@ def is_valid_subreddit(subreddit):
         print(f"An error occurred: {e}")
         return False
         """
-
