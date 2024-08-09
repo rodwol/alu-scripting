@@ -1,12 +1,18 @@
 #!/usr/bin/python3
-"""
-1-main
-"""
-import sys
+"""DOCS"""
+import requests
 
-if __name__ == '__main__':
-    top_ten = __import__('1-top_ten').top_ten
-    if len(sys.argv) < 2:
-        print("Please pass an argument for the subreddit to search.")
+
+def top_ten(subreddit):
+    """Docs"""
+    reddit_url = "https://www.reddit.com/r/{}/hot.json" \
+        .format(subreddit)
+    headers = headers = {'User-agent': 'Mozilla/5.0'}
+    response = requests.get(reddit_url, headers=headers)
+
+    if response.status_code == 200:
+        data = response.json()['data']
+        for post in data['children'][:10]:
+            print(post['data']['title'])
     else:
-        top_ten(sys.argv[1])
+        print(None)
